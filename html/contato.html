@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Conecta Bem</title>
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <h1>Conecta Bem</h1>
+                <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="voluntariado.html">Voluntariado</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Fale Conosco</h2>
+            <p>Seja você uma ONG em busca de apoio ou um doador querendo fazer a diferença, envie-nos uma mensagem. Responderemos o mais breve possível!</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Envie uma Mensagem</h3>
+            
+            <form action="/enviar-contato" method="POST">
+                
+                <div>
+                    <label for="nome">Seu Nome:</label><br>
+                    <input type="text" id="nome" name="nome_completo" required>
+                </div>
+
+                <div>
+                    <label for="email">Seu E-mail:</label><br>
+                    <input type="email" id="email" name="email_contato" required>
+                </div>
+
+                <div>
+                    <label for="assunto">Assunto:</label><br>
+                    <select id="assunto" name="assunto">
+                        <option value="duvida_geral">Dúvida Geral</option>
+                        <option value="registro_ong">Registro de ONG</option>
+                        <option value="apoio_doacao">Apoio / Doação</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem_contato" rows="6" required></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit">Enviar Mensagem</button>
+                </div>
+
+            </form>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h3>Outras Formas de Contato</h3>
+            
+            <ul>
+                <li><strong>E-mail Direto:</strong> <a href="mailto:contato@conectabem.org">contato@conectabem.org</a></li>
+                <li><strong>Telefone/WhatsApp:</strong> <a href="tel:+5511987654321">(11) 98765-4321</a></li>
+                <li><strong>Endereço:</strong> Rua da Causa, 123 - Bairro Solidário, Cidade/UF</li>
+                <li><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 9h às 18h</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conecta Bem. Todos os direitos reservados.</p>
+        <p>Desenvolvido com o coração.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntariado - Conecta Bem</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Conecta Bem</h1>
+                <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="voluntariado.html">Voluntariado</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Seja um Voluntário Conecta Bem</h2>
+            <p>Seu tempo é um dos bens mais valiosos. Junte-se à nossa rede e use seus talentos para apoiar as ONGs do Brasil e transformar vidas. Encontre aqui a causa que move o seu coração!</p>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h3>Como Funciona?</h3>
+            
+            <ol>
+                <li><strong>Preencha o Cadastro:</strong> Informe suas habilidades, disponibilidade e áreas de interesse no formulário abaixo.</li>
+                <li><strong>Encontre a Causa:</strong> Nossa plataforma cruza seu perfil com as necessidades urgentes das ONGs cadastradas.</li>
+                <li><strong>Conecte-se:</strong> A ONG interessada entrará em contato para iniciar o processo de engajamento.</li>
+                <li><strong>Transforme:</strong> Comece a colaborar e a fazer a diferença!</li>
+            </ol>
+
+            <p>Temos vagas presenciais e remotas em diversas áreas.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Formulário de Inscrição</h3>
+            
+            <form action="/enviar-inscricao-voluntario" method="POST">
+                
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <div>
+                        <label for="vol_nome">Nome Completo:</label><br>
+                        <input type="text" id="vol_nome" name="nome_voluntario" required>
+                    </div>
+
+                    <div>
+                        <label for="vol_email">E-mail:</label><br>
+                        <input type="email" id="vol_email" name="email_voluntario" required>
+                    </div>
+                    
+                    <div>
+                        <label for="vol_telefone">Telefone (WhatsApp):</label><br>
+                        <input type="tel" id="vol_telefone" name="telefone_voluntario">
+                    </div>
+                    
+                    <div>
+                        <label for="vol_cidade">Cidade/Estado:</label><br>
+                        <input type="text" id="vol_cidade" name="cidade_estado" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Suas Habilidades e Interesses</legend>
+                    
+                    <div>
+                        <label>Quais são suas principais habilidades? (Marque todas que se aplicam)</label><br>
+                        <input type="checkbox" id="h_adm" name="habilidade[]" value="Administrativo">
+                        <label for="h_adm">Administrativo/Financeiro</label><br>
+
+                        <input type="checkbox" id="h_tech" name="habilidade[]" value="Tecnologia">
+                        <label for="h_tech">Tecnologia/Web Design</label><br>
+                        
+                        <input type="checkbox" id="h_com" name="habilidade[]" value="Comunicação">
+                        <label for="h_com">Comunicação/Marketing Digital</label><br>
+
+                        <input type="checkbox" id="h_edu" name="habilidade[]" value="Educação">
+                        <label for="h_edu">Educação/Tutoria</label><br>
+
+                        <input type="checkbox" id="h_evento" name="habilidade[]" value="Eventos">
+                        <label for="h_evento">Organização de Eventos</label><br>
+                        
+                        <input type="checkbox" id="h_geral" name="habilidade[]" value="Geral">
+                        <label for="h_geral">Apoio Geral/Mão na Massa</label><br>
+                    </div>
+                    
+                    <div>
+                        <label>Quais causas você tem interesse em apoiar? (Escolha uma ou mais)</label><br>
+                        <select id="causas" name="causas_interesse" multiple size="4" required>
+                            <option value="criancas">Crianças e Adolescentes</option>
+                            <option value="idosos">Idosos</option>
+                            <option value="animais">Causa Animal</option>
+                            <option value="ambiente">Meio Ambiente</option>
+                            <option value="cultura">Cultura e Artes</option>
+                            <option value="saude">Saúde</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="vol_disponibilidade">Disponibilidade Semanal Estimada (em horas):</label><br>
+                        <input type="number" id="vol_disponibilidade" name="disponibilidade_horas" min="1" max="40" value="5" required>
+                    </div>
+                    
+                    <div>
+                        <label for="vol_comentario">Fale um pouco sobre sua motivação para ser voluntário:</label><br>
+                        <textarea id="vol_comentario" name="motivacao" rows="4"></textarea>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Termos</legend>
+                    <div>
+                        <input type="checkbox" id="termos" name="aceite_termos" required>
+                        <label for="termos">Declaro que as informações são verdadeiras e aceito que a Conecta Bem as compartilhe com as ONGs para fins de voluntariado.</label>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Enviar Minha Candidatura</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conecta Bem. Todos os direitos reservados.</p>
+        <p>Desenvolvido com o coração.</p>
+    </footer>
+
+</body>
+</html>
