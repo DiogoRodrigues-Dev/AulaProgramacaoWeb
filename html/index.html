@@ -1,42 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta Bem</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - Conecta Bem</title>
+  <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Conecta Bem</h1>
-                <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
-            </div>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
+      </div>
 
-        <!-- navegação menus -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="voluntariado.html">Voluntariado</a></li>
-                    <li><a href="doacoes.html">Doações</a></li>
-                    <li><a href="transparencia.html">Transparência</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contato.html">Contatos</a></li>
-                </ul>
-            </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="ativo">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li><a href="doacoes.html">Doações</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Conecta Bem</h1>
+      <p><strong>corações e causas — encontre, apoie e transforme com as ONGs do Brasil</strong> </p>
+      <div class="botoes">
+        <a href="voluntariado.html" class="botao">Seja Voluntário</a>
+        <a href="doacoes.html" class="botao botao-secundario">Faça uma Doação</a>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="sobre">
+      <h2>Quem Somos</h2>
+      <p>A <strong>Conecta Bem</strong> é uma plataforma que conecta pessoas dispostas a fazer a diferença com ONGs que precisam de apoio. 
+         Nosso objetivo é criar uma rede solidária e acessível, transformando boas intenções em ações concretas.</p>
+    </section>
+
+    <section class="imagens">
+        <img src="../imagens/futebol.jpg" alt="Crianças periféricas jogando futebol em quadra de cimento">
+    </section>
+
+    <!-- Projetos -->
+    <section class="projetos">
+      <h2>Projetos em Destaque</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="../imagens/projeto1.jpg" alt="Apoio a Crianças Carentes">
+          <h3>Apoio a Crianças Carentes</h3>
+          <p>Oferecemos reforço escolar e atividades culturais para crianças em situação de vulnerabilidade.</p>
         </div>
-    </header>
 
-    <main>
-        <h1> Conecta Bem </h1>
-        <p>Unindo corações e causas — encontre, apoie e transforme com as ONGs do Brasil.</p>
-    </main>
+        <div class="card">
+          <img src="../imagens/projeto2.jpg" alt="Resgate Animal">
+          <h3>Resgate Animal</h3>
+          <p>Colabore com abrigos e grupos de proteção animal que salvam vidas todos os dias.</p>
+        </div>
 
-    <footer>
+        <div class="card">
+          <img src="../imagens/projeto3.jpg" alt="Refloresta Brasil">
+          <h3>Refloresta Brasil</h3>
+          <p>Ajude a plantar árvores e restaurar áreas degradadas em nosso país.</p>
+        </div>
+      </div>
+    </section>
 
-    </footer>
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+      <h2>O que dizem nossos voluntários</h2>
+      <blockquote>
+        “Participar da Conecta Bem mudou minha forma de ver o mundo. Hoje faço parte de algo maior!”
+        <cite>— Ana Paula, voluntária desde 2023</cite>
+      </blockquote>
+    </section>
 
+    <!-- Chamada Final -->
+    <section class="cta-final">
+      <h2><strong>Junte-se a nós e faça parte dessa transformação</strong> </h2>
+      <a href="voluntariado.html" class="botao">Quero ser voluntário</a>
+      <a href="doacoes.html" class="botao botao-secundario">Apoiar com doação</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Conecta Bem. Todos os direitos reservados.</p>
+    <p>Desenvolvido com o coração 💙</p>
+  </footer>
 </body>
 </html>
