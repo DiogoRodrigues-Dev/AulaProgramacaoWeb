@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Conecta Bem</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/projetos.css"> 
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html" class="ativo">Projetos</a></li> 
+                <li><a href="ajuda.html">Ajudar</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+        
+        <a href="cadastro.html" class="right-aligned">Cadastre-se</a>
+    </header>
+    
+    <main> 
+        <section class="banner-projetos">
+            <div class="container">
+                <h1>Encontre uma <strong>Causa</strong> para Ajudar</h1>
+                <p>Nesta seção, você conhece os projetos das nossas <strong>ONGs parceiras</strong> que estão ativamente buscando voluntários e doações. Escolha sua causa e <strong>faça a diferença!</strong></p>
+            </div>
+        </section>
+
+        <section class="filtro container">
+            <div class="opcoes-filtro">
+                <button class="botao-filtro ativo" data-filtro="todos">Todos os Projetos</button>
+                <button class="botao-filtro" data-filtro="educacao">Educação</button>
+                <button class="botao-filtro" data-filtro="meio-ambiente">Meio Ambiente</button>
+                <button class="botao-filtro" data-filtro="animais">Animais</button>
+                <button class="botao-filtro" data-filtro="saude">Saúde</button>
+            </div>
+        </section>
+
+        <section class="lista-projetos container">
+            <div class="projeto-card" data-categoria="educacao">
+                <img src="../imagens/ONG_escola.jpg" alt="Reforço Escolar para Todos">
+                <div class="card-detalhes">
+                    <h3>Projeto: Reforço Escolar para Todos</h3>
+                    <span class="tag educacao">Educação</span>
+                    <p class="ong-nome">ONG: **Amanhã Melhor**</p>
+                    <p>Oferece aulas de reforço e oficinas de arte e cultura para 200 crianças em comunidades carentes. <strong>Precisamos de professores voluntários!</strong></p>
+                    <div class="card-botoes">
+                        <a href="doacoes.html?ong=am-melhor" class="botao botao-doar">Quero Doar</a>
+                        <a href="voluntariado.html?proj=reforco" class="botao botao-voluntario">Quero Ajudar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projeto-card" data-categoria="animais">
+                <img src="../imagens/ONG_animais.jpg" alt="Campanha de Castração e Resgate">
+                <div class="card-detalhes">
+                    <h3>Projeto: Lar Temporário Amigo</h3>
+                    <span class="tag animais">Animais</span>
+                    <p class="ong-nome">ONG: **Quatro Patas Felizes**</p>
+                    <p>Foco no resgate, tratamento e esterilização de animais de rua. Já salvamos mais de 500 vidas. <strong>Precisamos de ração e medicamentos.</strong></p>
+                    <div class="card-botoes">
+                        <a href="doacoes.html?ong=qp-felizes" class="botao botao-doar">Quero Doar</a>
+                        <a href="voluntariado.html?proj=resgate" class="botao botao-voluntario">Quero Ajudar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projeto-card" data-categoria="meio-ambiente">
+                <img src="../imagens/ONG_MeioAmbiente.jpg" alt="Guardiões da Mata Atlântica">
+                <div class="card-detalhes">
+                    <h3>Projeto: Guardiões da Mata Atlântica</h3>
+                    <span class="tag meio-ambiente">Meio Ambiente</span>
+                    <p class="ong-nome">ONG: **Refloresta Brasil**</p>
+                    <p>Plantio e monitoramento de 10.000 mudas nativas da Mata Atlântica. <strong>Precisamos de voluntários para os mutirões de plantio.</strong></p>
+                    <div class="card-botoes">
+                        <a href="doacoes.html?ong=refloresta" class="botao botao-doar">Quero Doar</a>
+                        <a href="voluntariado.html?proj=mata-atlantica" class="botao botao-voluntario">Quero Ajudar</a>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="projeto-card" data-categoria="saude">
+                <img src="../imagens/ONG_Saude.jpg" alt="Consultas Médicas Gratuitas">
+                <div class="card-detalhes">
+                    <h3>Projeto: Saúde na Comunidade</h3>
+                    <span class="tag saude">Saúde</span>
+                    <p class="ong-nome">ONG: **Mão Amiga**</p>
+                    <p>Levamos atendimento médico e odontológico gratuito para regiões de difícil acesso. <strong>Precisamos de doação de kits de higiene.</strong></p>
+                    <div class="card-botoes">
+                        <a href="doacoes.html?ong=mao-amiga" class="botao botao-doar">Quero Doar</a>
+                        <a href="voluntariado.html?proj=saude-comunidade" class="botao botao-voluntario">Quero Ajudar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projeto-card" data-categoria="educacao">
+                <img src="../imagens/ONG_Tecnologia.jpg" alt="Capacitação Profissional Jovem">
+                <div class="card-detalhes">
+                    <h3>Projeto: Capacitação Profissional Jovem</h3>
+                    <span class="tag educacao">Educação</span>
+                    <p class="ong-nome">ONG: **Futuro Mais**</p>
+                    <p>Oferece cursos técnicos e profissionalizantes para jovens de baixa renda. <strong>Voluntários com experiência em TI são bem-vindos!</strong></p>
+                    <div class="card-botoes">
+                        <a href="doacoes.html?ong=futuro-mais" class="botao botao-doar">Quero Doar</a>
+                        <a href="voluntariado.html?proj=ti-jovem" class="botao botao-voluntario">Quero Ajudar</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="cta-final">
+            <div class="container">
+                <h2>Não encontrou a causa ideal? <strong>Cadastre-se para receber novidades!</strong> </h2>
+                <a href="cadastro.html" class="botao">Cadastrar meu Email</a>
+                <a href="doacoes.html" class="botao botao-secundario">Ver Todas as ONGs</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conecta Bem. Todos os direitos reservados.</p>
+        <p>Desenvolvido com o coração 💙</p>
+    </footer>
+
+    <script src="../scripts/projetos.js"></script> 
+</body>
+</html>

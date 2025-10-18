@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Conecta Bem</title>
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+<body>
+
+    <header>
+        <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html" class="ativo right-aligned">Cadastre-se</a></li>
+                <li><a href="ajuda.html">Ajudar</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Cadastre-se na Conecta Bem</h1>
+        <p class="subtitle">Escolha seu caminho para a transformação: ONG, Doador ou Voluntário.</p>
+
+        <div class="form-container"> 
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="ong">Cadastrar ONG</button>
+                <button class="tab-button" data-tab="pessoa">Cadastrar Doador / Voluntário</button>
+            </div>
+
+            <div id="ong-tab" class="tab-content">
+                <form action="/cadastro-ong" method="post">
+                    <fieldset>
+                        <legend>Informações da ONG</legend>
+
+                        <div class="form-group">
+                            <label for="ong_nome">Nome da ONG / Instituição *</label>
+                            <input type="text" id="ong_nome" name="ong_nome" required minlength="3" placeholder="Ex: Mão Amiga" title="O nome deve ter pelo menos 3 caracteres.">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ong_cnpj">CNPJ *</label>
+                                <input type="text" id="ong_cnpj" name="ong_cnpj" required
+                                        pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}"
+                                        title="Formato CNPJ: 00.000.000/0000-00" maxlength="18">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ong_telefone">Telefone *</label>
+                                <input type="tel" id="ong_telefone" name="ong_telefone" required
+                                        pattern="\(\d{2}\)\s?\d{4,5}-?\d{4}"
+                                        title="Formato de Telefone: (99) 99999-9999 ou (99) 9999-9999" maxlength="15">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ong_email">E-mail de Contato *</label>
+                            <input type="email" id="ong_email" name="ong_email" required placeholder="email@ong.org.br">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Localização</legend>
+
+                        <div class="form-row">
+                            <div class="form-group size-small">
+                                <label for="ong_cep">CEP *</label>
+                                <input type="text" id="ong_cep" name="ong_cep" required
+                                        pattern="\d{5}-?\d{3}" maxlength="9"
+                                        title="Formato CEP: 00000-000">
+                            </div>
+                            <div class="form-group size-medium">
+                                <label for="ong_endereco">Rua / Logradouro *</label>
+                                <input type="text" id="ong_endereco" name="ong_endereco" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group size-small">
+                                <label for="ong_numero">Número *</label>
+                                <input type="text" id="ong_numero" name="ong_numero" required>
+                            </div>
+                            <div class="form-group size-medium">
+                                <label for="ong_bairro">Bairro *</label>
+                                <input type="text" id="ong_bairro" name="ong_bairro" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ong_complemento">Complemento</label>
+                            <input type="text" id="ong_complemento" name="ong_complemento">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group size-medium">
+                                <label for="ong_cidade">Cidade *</label>
+                                <input type="text" id="ong_cidade" name="ong_cidade" required>
+                            </div>
+                            <div class="form-group size-small">
+                                <label for="ong_estado">Estado *</label>
+                                <select id="ong_estado" name="ong_estado" required>
+                                    <option value="" disabled selected>UF</option>
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AM">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Cadastrar ONG</button>
+                </form>
+            </div>
+
+            <div id="pessoa-tab" class="tab-content hidden">
+                <form action="/cadastro-pessoa" method="post">
+                    <fieldset>
+                        <legend>Informações Básicas</legend>
+
+                        <div class="form-group">
+                            <label for="pessoa_nome">Nome Completo *</label>
+                            <input type="text" id="pessoa_nome" name="pessoa_nome" required minlength="5" placeholder="Seu nome completo">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pessoa_email">E-mail *</label>
+                                <input type="email" id="pessoa_email" name="pessoa_email" required placeholder="seu.email@exemplo.com">
+                            </div>
+                            <div class="form-group size-small">
+                                <label for="pessoa_telefone">Telefone *</label>
+                                <input type="tel" id="pessoa_telefone" name="pessoa_telefone" required
+                                        pattern="\(\d{2}\)\s?\d{4,5}-?\d{4}"
+                                        title="Formato de Telefone: (99) 99999-9999 ou (99) 9999-9999" maxlength="15">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pessoa_cpf">CPF *</label>
+                                <input type="text" id="pessoa_cpf" name="pessoa_cpf" required
+                                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                        title="Formato CPF: 000.000.000-00" maxlength="14">
+                            </div>
+                            <div class="form-group">
+                                <label for="pessoa_data_nasc">Data de Nascimento *</label>
+                                <input type="date" id="pessoa_data_nasc" name="pessoa_data_nasc" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div class="form-row">
+                            <div class="form-group size-small">
+                                <label for="pessoa_cep">CEP *</label>
+                                <input type="text" id="pessoa_cep" name="pessoa_cep" required
+                                        pattern="\d{5}-?\d{3}" maxlength="9"
+                                        title="Formato CEP: 00000-000">
+                            </div>
+                            <div class="form-group size-medium">
+                                <label for="pessoa_endereco">Rua / Logradouro *</label>
+                                <input type="text" id="pessoa_endereco" name="pessoa_endereco" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group size-small">
+                                <label for="pessoa_numero">Número *</label>
+                                <input type="text" id="pessoa_numero" name="pessoa_numero" required>
+                            </div>
+                            <div class="form-group size-medium">
+                                <label for="pessoa_bairro">Bairro *</label>
+                                <input type="text" id="pessoa_bairro" name="pessoa_bairro" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pessoa_complemento">Complemento</label>
+                            <input type="text" id="pessoa_complemento" name="pessoa_complemento">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group size-medium">
+                                <label for="pessoa_cidade">Cidade *</label>
+                                <input type="text" id="pessoa_cidade" name="pessoa_cidade" required>
+                            </div>
+                            <div class="form-group size-small">
+                                <label for="pessoa_estado">Estado *</label>
+                                <select id="pessoa_estado" name="pessoa_estado" required>
+                                    <option value="" disabled selected>UF</option>
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AM">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Interesse</legend>
+                        <div class="form-group">
+                            <label for="interesse">Qual seu principal interesse?</label>
+                            <select id="interesse" name="interesse">
+                                <option value="doar">Doação Financeira</option>
+                                <option value="voluntariar">Voluntariado em Projetos</option>
+                                <option value="ambos">Ambos</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Cadastrar Doador / Voluntário</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conecta Bem. Todos os direitos reservados.</p>
+        <p>Desenvolvido com o coração 💙</p>
+    </footer>
+
+    <script src="../scripts/cadastro.js"></script>
+</body>
+</html>

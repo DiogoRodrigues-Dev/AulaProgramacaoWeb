@@ -1,0 +1,183 @@
+.banner-projetos {
+    background-color: #2563eb; /* Azul do header */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+.banner-projetos h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.banner-projetos p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.banner-projetos strong {
+    color: #facc15;
+    font-weight: 800;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* FILTRO */
+.filtro {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.opcoes-filtro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.botao-filtro {
+    background-color: #e0e7ff; 
+    color: #1e3a8a;
+    border: 2px solid #a5b4fc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.botao-filtro:hover {
+    background-color: #c7d2fe;
+    transform: translateY(-2px);
+}
+
+.botao-filtro.ativo {
+    background-color: #34d399;
+    border-color: #04482f;
+    color: #04482f;
+}
+
+/* LISTA DE PROJETOS */
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.projeto-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 350px;
+    overflow: hidden; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+}
+
+.card-detalhes {
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detalhes h3 {
+    color: #1e3a8a;
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* Estilo para o nome da ONG */
+.ong-nome {
+    font-size: 0.95rem;
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.card-detalhes p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left; 
+    flex-grow: 1;
+}
+
+/* Tags de Categoria */
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Cores das Tags (Mantidas) */
+.tag.educacao { background-color: #fef3c7; color: #facc15; }
+.tag.animais { background-color: #fecaca; color: #ef4444; }
+.tag.meio-ambiente { background-color: #d1fae5; color: #10b981; }
+.tag.saude { background-color: #bfdbfe; color: #3b82f6; }
+
+
+/* NOVO: BOTÕES DE AÇÃO DUPLOS */
+.card-botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.card-botoes .botao {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Cor especial para o botão de Voluntário */
+.botao-voluntario {
+    background-color: #facc15;
+    color: #1e3a8a;
+    border: none;
+}
+
+.botao-doar {
+    background-color: #1e3a8a;
+    color: white;
+    border: 1px solid #1e3a8a;
+}
+
+.botao-doar:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .card-botoes {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda e Contribuição - Conecta Bem</title>
+    <link rel="stylesheet" href="../css/cadastro.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="ajuda.html" class="ativo">Ajudar</a></li>
+                <li><a href="transparencia.html">Transparência</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+
+        <a href="cadastro.html" class="right-aligned">Cadastre-se</a>
+    </header>
+
+
+    <main>
+        <h1>Como Você Pode Ajudar?</h1>
+        <p class="subtitle">Escolha o caminho para o seu impacto: doando ou dedicando seu tempo.</p>
+
+        <div class="form-container">
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="doacao">Doação Financeira</button>
+                <button class="tab-button" data-tab="voluntariado">Quero Ser Voluntário</button>
+            </div>
+
+            <div id="doacao-tab" class="tab-content doacao-tab-content"> 
+                <section class="doacao-opcoes">
+                    
+                    <div class="doacao-card">
+                        <h3>Doação Única para a Plataforma</h3>
+                        <p>O fundo geral apoia projetos com maior urgência de forma flexível.</p>
+                        <form>
+                            <div class="opcoes-rapidas">
+                                <button data-valor="25">R$ 25</button>
+                                <button data-valor="50">R$ 50</button>
+                                <button data-valor="100">R$ 100</button>
+                                <button data-valor="200">R$ 200</button>
+                            </div>
+
+                            <input type="number" placeholder="Outro Valor (Mín. R$ 10)" min="10">
+                            <button type="submit">Prosseguir com a Doação</button>
+                        </form>
+                    </div>
+
+                    <div class="doacao-card">
+                        <h3>Doação Recorrente (Mensal)</h3>
+                        <p>Garanta a sustentabilidade e o planejamento a longo prazo dos projetos.</p>
+                        <form>
+                            <div class="opcoes-rapidas">
+                                <button type="button" data-valor="30">R$ 30/mês</button>
+                                <button type="button" data-valor="60">R$ 60/mês</button>
+                            </div>
+                            <label for="frequencia">Frequência</label>
+                            <select id="frequencia">
+                                <option value="mensal">Mensal</option>
+                                <option value="trimestral">Trimestral</option>
+                                <option value="anual">Anual</option>
+                            </select>
+                            <button type="submit">Assinar Doação</button>
+                        </form>
+                    </div>
+
+                    <div class="doacao-card">
+                        <h3>Direcione para uma Causa</h3>
+                        <p>Escolha o campo de atuação que mais move o seu coração.</p>
+                        <form>
+                            <label for="causa">Causa de Apoio</label>
+                            <select id="causa">
+                                <option value="educacao">Educação</option>
+                                <option value="saude">Saúde</option>
+                                <option value="meioambiente">Meio Ambiente</option>
+                                <option value="assistencia">Assistência Social</option>
+                            </select>
+                            <input type="number" placeholder="Valor da Doação (R$)" min="1">
+                            <button type="submit">Doar para a Causa</button>
+                        </form>
+                    </div>
+                </section>
+                
+                <div class="selo-confianca">
+                    <p>🔒 Transações 100% seguras. Utilizamos um **rigoroso processo de verificação** que garante a **Confiança e Transparência**.</p>
+                </div>
+            </div>
+
+            <div id="voluntariado-tab" class="tab-content hidden voluntariado-tab-content">
+                <div class="voluntariado-wrapper">
+                    <h2>Dê Seu Tempo, Multiplique o Impacto</h2>
+                    <p>Encontre projetos que precisam das suas habilidades e do seu tempo. Seu trabalho voluntário é inestimável!</p>
+
+                    <form class="voluntariado-form">
+                        <fieldset>
+                            <legend>Encontre Seu Voluntariado</legend>
+
+                            <div class="form-group">
+                                <label for="area">Área de Interesse Principal</label>
+                                <select id="area">
+                                    <option value="">Todas as Áreas</option>
+                                    <option value="tecnologia">Tecnologia e Desenvolvimento</option>
+                                    <option value="ensino">Ensino e Reforço Escolar</option>
+                                    <option value="saude">Saúde e Bem-estar</option>
+                                    <option value="marketing">Marketing e Comunicação</option>
+                                    <option value="administrativo">Administrativo e Finanças</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="localizacao">Localização (Cidade/Estado)</label>
+                                <input type="text" id="localizacao" placeholder="Ex: São Paulo, SP ou Remoto">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="disponibilidade">Disponibilidade Semanal (Horas)</label>
+                                <input type="number" id="disponibilidade" min="1" max="40" placeholder="Ex: 5h">
+                            </div>
+
+                            <button type="submit" class="buscar-vagas-btn">Buscar Vagas de Voluntariado</button>
+                        </fieldset>
+                    </form>
+
+                    <div class="cta-cadastro-voluntario">
+                        <h3>Já é Voluntário Cadastrado?</h3>
+                        <p>Se você já possui um cadastro de Doador/Voluntário, <a href="login.html">faça login</a> para ver projetos exclusivos.</p>
+                        <p>Se ainda não, <a href="cadastro.html">faça seu cadastro completo</a> para validarmos suas habilidades.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conecta Bem. Todos os direitos reservados.</p>
+        <p>Desenvolvido com o coração 💙</p>
+    </footer>
+
+    <script src="../scripts/ajuda.js"></script> 
+</body>
+</html>

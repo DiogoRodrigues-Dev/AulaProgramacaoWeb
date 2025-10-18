@@ -1,0 +1,292 @@
+/* ====== ESTILO GERAL ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* ====== CABEÇALHO ====== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #04482f;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+    color: #34d399;
+}
+
+/* ====== BOTÃO CADASTRE-SE ====== */
+.right-aligned {
+    background-color: #34d399;
+    color: #04482f !important;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.right-aligned:hover {
+    background-color: #10b981;
+    transform: scale(1.05);
+}
+
+/* ====== CONTAINER PRINCIPAL ====== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== TÍTULOS ====== */
+main h1 {
+    text-align: center;
+    color: #04482f;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 2rem;
+}
+
+/* ====== ABAS (TABS) ====== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    background-color: #f1f5f9;
+    border: 2px solid #cbd5e1;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #04482f;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #10b981;
+    color: white;
+    border-color: #065f46;
+}
+
+.tab-button:hover {
+    background-color: #34d399;
+    color: white;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+/* ====== FORMULÁRIO DE DOAÇÃO ====== */
+.doacao-card {
+    background-color: #f9fafb;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.doacao-card h3 {
+    color: #04482f;
+    margin-bottom: 0.5rem;
+}
+
+.doacao-card p {
+    margin-bottom: 1rem;
+    color: #475569;
+}
+
+/* ====== BOTÕES DE VALOR ====== */
+.opcoes-rapidas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+}
+
+.opcoes-rapidas button {
+    background-color: #f1f5f9;
+    border: 2px solid #cbd5e1;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.opcoes-rapidas button:hover {
+    border-color: #10b981;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+    transform: translateY(-3px);
+}
+
+.opcoes-rapidas button.selecionado {
+    background-color: #10b981;
+    color: #fff;
+    border-color: #0f766e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+/* Check de seleção */
+.opcoes-rapidas button.selecionado::after {
+    content: "✓";
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 1rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* ====== INPUT DE VALOR MANUAL ====== */
+input[type="number"],
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+/* ====== BOTÕES DE FORMULÁRIOS ====== */
+form button {
+    display: block;
+    width: 100%;
+    background-color: #04482f;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #065f46;
+    transform: scale(1.03);
+}
+
+/* ====== VOLUNTARIADO ====== */
+.voluntariado-form {
+    background-color: #f9fafb;
+    border: 1px solid #e2e8f0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-weight: bold;
+    color: #04482f;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* ====== RODAPÉ ====== */
+footer {
+    text-align: center;
+    background-color: #04482f;
+    color: white;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .right-aligned {
+        align-self: center;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .opcoes-rapidas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

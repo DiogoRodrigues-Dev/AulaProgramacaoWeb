@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+header img {
+    width: 60px;
+    height: auto;
+    margin-right: 2rem;
+}
+
+header nav {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header nav a:hover,
+header nav a.ativo {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.right-aligned {
+    background-color: #34d399;
+    color: #04482f !important;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    order: 99; 
+    margin-left: auto;
+}
+
+.right-aligned:hover {
+    background-color: #10b981;
+    transform: scale(1.05);
+}
+
+/* -------------------- MAIN/FORMULÁRIO -------------------- */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 2rem; /* Apenas padding lateral, o fundo fica no .form-container */
+}
+
+h1 {
+    color: #1e3a8a; 
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+/* NOVO: Container que unifica abas e conteúdo */
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Removemos o h2 desnecessário */
+main h2 {
+    display: none;
+}
+
+
+/* Formulário Container (Agora com padding interno e sem fundo próprio) */
+form {
+    gap: 1rem; 
+    display: flex;
+    flex-direction: column;
+    background: transparent; /* Fundo transparente, o .form-container tem o fundo branco */
+    padding: 0; /* Remove padding duplicado */
+    border: none; /* Remove borda duplicada */
+    border-radius: 0 0 8px 8px; /* Mantém apenas borda inferior arredondada */
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 1rem; 
+    background-color: #fff;
+    display: block; 
+}
+
+legend {
+    font-weight: bold;
+    color: #1e3a8a;
+    padding: 0 0.5rem;
+    font-size: 1.1em;
+}
+
+.form-group, .form-row {
+    margin-bottom: 1rem;
+}
+
+fieldset > .form-group:last-child,
+fieldset > .form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem; 
+}
+
+.form-row .form-group {
+    flex-grow: 1; 
+    margin-bottom: 0;
+}
+
+.form-row .size-small {
+    flex-basis: 30%;
+    flex-grow: 0;
+}
+
+.form-row .size-medium {
+    flex-basis: 70%;
+    flex-grow: 1;
+}
+
+form label {
+    font-weight: 600;
+    color: #1e3a8a;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.6rem 0.7rem; 
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-top: 0.3rem;
+    background-color: #f9fafb;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+input:invalid:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.4);
+}
+
+button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e40af;
+}
+
+/* -------------------- ABAS (TABS) -------------------- */
+.tabs {
+    display: flex;
+    justify-content: center;
+    /* Move as abas para cima do container */
+    padding-top: 2rem; 
+}
+
+.tab-button {
+    padding: 10px 18px;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    background-color: #e2e8f0;
+    margin: 0 2px;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    color: #475569;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #cbd5e1;
+}
+
+.tab-button.active {
+    background-color: white; /* Cor do container principal */
+    border-color: #e2e8f0;
+    border-bottom: 1px solid white; /* Coloca a borda da cor do fundo do container para "colar" */
+    color: #1e3a8a;
+    position: relative;
+    z-index: 10;
+}
+
+.tab-content form {
+    /* O form agora tem o padding, e o tab-content fica apenas para o controle de display */
+    border-top: 1px solid #e2e8f0; /* Borda para separar o conteúdo das abas */
+    margin-top: -1px; /* Para garantir que cole na aba ativa */
+}
+
+.hidden {
+    display: none;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+/* -------------------- RESPONSIVO -------------------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    main {
+        padding: 0 1rem; /* Reduz padding da main para telas pequenas */
+    }
+
+    header img {
+        margin-bottom: 1rem;
+    }
+
+    header nav {
+        margin: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .right-aligned {
+        margin-top: 0.5rem;
+    }
+
+    .tabs {
+        flex-direction: column;
+        padding-top: 1rem; /* Ajusta o padding do topo no mobile */
+    }
+
+    .tab-button {
+        border-radius: 6px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .tab-button.active {
+        border-bottom: 1px solid white;
+    }
+    
+    /* Quebra o layout Flexbox em telas pequenas para que os campos se empilhem */
+    .form-row {
+        flex-direction: column;
+        gap: 0; 
+    }
+
+    .form-row .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-row:last-child .form-group:last-child {
+        margin-bottom: 0;
+    }
+}

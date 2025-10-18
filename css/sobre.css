@@ -1,130 +1,183 @@
-/* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* BANNER DE INFORMAÇÃO */
+.banner-sobre {
+    background-color: #e0e7ff;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px; 
+    border-bottom: 5px solid #2563eb;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f9fafb;
-  color: #333;
-  line-height: 1.6;
+.banner-sobre h1 {
+    color: #1e3a8a;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Container padrão */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.banner-sobre strong {
+    color: #facc15;
+    font-weight: 800;
 }
 
-/* HEADER */
-header {
-  background-color: #2563eb; /* Azul */
-  color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza o menu */
+.banner-sobre p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #475569;
 }
 
-/* Logo à esquerda */
-header img {
-  position: absolute;
-  left: 2rem;
-  width: 60px;
-  height: auto;
+/* ESTILO PARA A CAIXA BRANCA PRINCIPAL */
+.conteudo-principal-sobre {
+    max-width: 1100px; 
+    margin: 40px auto; 
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Navegação centralizada */
-header nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.2rem;
+/* SEÇÃO PRINCIPAL (HISTÓRIA E IMAGEM) */
+.historia-missao {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 40px 0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 40px;
 }
 
-header nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+.conteudo-texto {
+    flex: 2;
+    padding-right: 20px;
 }
 
-header nav a:hover,
-header nav a.ativo {
-  background-color: rgba(255, 255, 255, 0.2);
+.imagem-destaque {
+    flex: 1;
+    min-width: 250px;
 }
 
-/* MAIN */
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+.imagem-destaque img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-main h2,
-main h3 {
-  color: #1e3a8a;
-  margin-bottom: 1rem;
+.historia-missao h3 {
+    color: #1e3a8a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #facc15;
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
-main p {
-  margin-bottom: 1.5rem;
-  color: #475569;
+/* SEÇÃO DE VALORES/PILARESA */
+.valores-visao {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 40px;
 }
 
-main ul {
-  list-style: disc inside;
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
+.valores-visao h2 {
+    color: #1e3a8a;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
-/* Linha divisória */
-hr {
-  margin: 2rem 0;
-  border: none;
-  border-top: 1px solid #e2e8f0;
+.pilares-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-/* FOOTER */
-footer {
-  background-color: #0f172a;
-  color: #e2e8f0;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
+.pilar-card {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
 }
 
-footer p {
-  margin: 0.3rem 0;
-  font-size: 0.9rem;
+.pilar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pilar-card img {
+    width: 80px; 
+    height: 80px;
+    margin-bottom: 15px;
+    background-color: #facc15;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: contain; 
+}
+
+.pilar-card h4 {
+    color: #2563eb;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.objetivos {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.objetivos h3 {
+    color: #1e3a8a;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.objetivos p {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.chamada-acao {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
-  }
+@media (max-width: 900px) {
+    .historia-missao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .conteudo-texto {
+        padding-right: 0;
+    }
 
-  header img {
-    position: static;
-    margin-bottom: 1rem;
-  }
+    .imagem-destaque {
+        order: -1;
+        margin-bottom: 20px;
+    }
+    
+    .historia-missao h3 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pilares-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
+    .pilar-card {
+        max-width: 100%;
+    }
+    
+    .chamada-acao {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
