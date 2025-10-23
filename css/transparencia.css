@@ -1,0 +1,141 @@
+/* -------------------- LAYOUT GERAL DA PÁGINA -------------------- */
+
+main h1, main .subtitle {
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #1e3a8a; 
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* -------------------- SEÇÃO DE KPIS (Indicadores) -------------------- */
+.kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.kpi-card {
+    background-color: #e0f2fe;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #93c5fd;
+}
+
+.kpi-card .valor {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1e3a8a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.kpi-card .descricao {
+    color: #475569;
+    font-size: 0.9em;
+}
+
+/* -------------------- SEÇÃO DE DISTRIBUIÇÃO (Gráfico) -------------------- */
+.distribuicao-fundos {
+    text-align: center;
+}
+
+.grafico-area {
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+ 
+    padding: 20px;
+}
+
+.legenda-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #cbd5e1;
+}
+
+.legenda-container p {
+    font-weight: bold;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.legenda {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.legenda-item {
+    font-size: 0.95em;
+    color: #333;
+}
+
+.legenda-item::before {
+    content: '•';
+    margin-right: 5px;
+    font-size: 1.8em;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+/* Cores da Legenda */
+.item-projetos::before { color: #34d399; }
+.item-operacional::before { color: #f59e0b; }
+.item-reserva::before { color: #2563eb; }
+
+/* -------------------- SEÇÃO DE DOCUMENTOS -------------------- */
+.lista-documentos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+}
+
+.lista-documentos a {
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 600;
+    border-left: 5px solid #2563eb;
+    transition: background-color 0.2s, border-left-color 0.2s;
+}
+
+.lista-documentos a:hover {
+    background-color: #e2e8f0;
+    border-left-color: #34d399;
+}
+
+/* -------------------- RESPONSIVO -------------------- */
+@media (max-width: 600px) {
+    section {
+        padding: 1.5rem;
+    }
+
+    .kpis {
+        grid-template-columns: 1fr;
+    }
+    
+    .grafico-area {
+        max-width: 100%;
+    }
+
+    .lista-documentos {
+        margin: 20px auto 0 auto;
+    }
+}

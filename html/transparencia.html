@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparência - Conecta Bem</title>
+    <link rel="stylesheet" href="../css/cadastro.css"> 
+    <link rel="stylesheet" href="../css/transparencia.css"> 
+</head>
+<body>
+
+    <header>
+        <img src="../imagens/Logo.png" alt="Logo Conecta Bem">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li> 
+                <li><a href="transparencia.html" class="ativo">Transparência</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+                
+                <li class="right-aligned"><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Transparência e Prestação de Contas</h1>
+        <p class="subtitle">Seu apoio gera impacto real. Veja exatamente como os recursos são investidos para transformar vidas.</p>
+
+        <section class="kpis">
+            <h2>Nosso Impacto em Números (Últimos 12 Meses)</h2>
+            <div class="kpi-card">
+                <span class="valor" id="valor-doacoes">R$ 0,00</span>
+                <span class="descricao">Total Arrecadado em Doações</span>
+            </div>
+            <div class="kpi-card">
+                <span class="valor" id="valor-beneficiarios">0</span>
+                <span class="descricao">Pessoas Beneficiadas Diretamente</span>
+            </div>
+            <div class="kpi-card">
+                <span class="valor" id="valor-voluntarios">0</span>
+                <span class="descricao">Total de Voluntários Ativos</span>
+            </div>
+            <div class="kpi-card">
+                <span class="valor" id="valor-projetos">0</span>
+                <span class="descricao">Projetos Finalizados/Em Andamento</span>
+            </div>
+        </section>
+
+        <section class="distribuicao-fundos">
+            <h2>Distribuição de Recursos ($)</h2>
+            <div class="grafico-area">
+                <canvas id="grafico-fundos"></canvas>
+            </div>
+            <div class="legenda-container">
+                <p>Veja como cada R$ 100,00 é investido:</p>
+                <div class="legenda">
+                    <div class="legenda-item item-projetos">Projetos Sociais (80%)</div>
+                    <div class="legenda-item item-operacional">Custos Operacionais (15%)</div>
+                    <div class="legenda-item item-reserva">Fundo de Reserva (5%)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="documentos">
+            <h2>Documentos e Certificações</h2>
+            <p>Acesse nossos registros oficiais e relatórios auditados:</p>
+            <div class="lista-documentos">
+                
+                <a href="../pdf/Balanço_Patrimonial_e_Financeiro_2024.pdf" target="_blank" download>
+                    📄 Balanço Patrimonial e Financeiro (2024)
+                </a>
+
+                <a href="../pdf/Relatorio_Impacto_Social_2024.pdf" target="_blank" download>
+                    📊 Relatório de Impacto Social (2024)
+                </a>
+                
+                <a href="../pdf/Relatorio_Projetos_e_Voluntariado_2024.pdf" target="_blank" download>
+                    📈 Relatório de Projetos e Voluntariado (2024)
+                </a>
+                
+                <a href="../pdf/Estatuto_Social_e_Regimento_Interno_2024.pdf" target="_blank" download>
+                    📜 Estatuto Social e Regimento Interno
+                </a>
+                
+                <a href="../pdf/Certidoes_e_Registros.pdf" target="_blank" download>
+                    ✅ Certidões Negativas e Registro no CNAS
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conecta Bem. Todos os direitos reservados.</p>
+        <p>Desenvolvido com o coração 💙</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="../scripts/transparencia.js"></script>
+</body>
+</html>

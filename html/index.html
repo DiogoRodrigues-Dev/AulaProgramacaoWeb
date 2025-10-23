@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início - Conecta Bem</title>
     <link rel="stylesheet" href="../css/index.css">
-</head>
+    </head>
 
 <body>
     <header>
@@ -22,7 +22,7 @@
                 <li><a href="transparencia.html">Transparência</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contatos</a></li>
-            </ul>
+                </ul>
         </nav>
         
         <a href="cadastro.html" class="right-aligned">Cadastre-se</a>
@@ -49,23 +49,37 @@
         <section class="projetos container">
             <h2>Projetos em Destaque</h2>
             <div class="cards">
-                <div class="card">
-                    <img src="../imagens/projeto1.jpg" alt="Apoio a Crianças Carentes">
-                    <h3>Apoio a Crianças Carentes</h3>
-                    <p>Oferecemos reforço escolar e atividades culturais para crianças em situação de vulnerabilidade.</p>
-                </div>
+                
+                <a href="projetos.html?filtro=educacao" class="card-link">
+                    <div class="card">
+                        <img src="../imagens/projeto1.jpg" alt="Apoio a Crianças Carentes">
+                        <h3>Apoio a Crianças Carentes</h3>
+                        <p>Oferecemos reforço escolar e atividades culturais para crianças em situação de vulnerabilidade.</p>
+                        <span class="ver-mais">Ver detalhes »</span>
+                    </div>
+                </a>
 
-                <div class="card">
-                    <img src="../imagens/projeto2.jpg" alt="Resgate Animal">
-                    <h3>Resgate Animal</h3>
-                    <p>Colabore com abrigos e grupos de proteção animal que salvam vidas todos os dias.</p>
-                </div>
+                <a href="projetos.html?filtro=animais" class="card-link">
+                    <div class="card">
+                        <img src="../imagens/projeto2.jpg" alt="Resgate Animal">
+                        <h3>Resgate Animal</h3>
+                        <p>Colabore com abrigos e grupos de proteção animal que salvam vidas todos os dias.</p>
+                        <span class="ver-mais">Ver detalhes »</span>
+                    </div>
+                </a>
 
-                <div class="card">
-                    <img src="../imagens/projeto3.jpg" alt="Refloresta Brasil">
-                    <h3>Refloresta Brasil</h3>
-                    <p>Ajude a plantar árvores e restaurar áreas degradadas em nosso país.</p>
-                </div>
+                <a href="projetos.html?filtro=meio-ambiente" class="card-link">
+                    <div class="card">
+                        <img src="../imagens/projeto3.jpg" alt="Refloresta Brasil">
+                        <h3>Refloresta Brasil</h3>
+                        <p>Ajude a plantar árvores e restaurar áreas degradadas em nosso país.</p>
+                        <span class="ver-mais">Ver detalhes »</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="ver-todos">
+                <a href="projetos.html" class="botao botao-primario">Ver Todos os Projetos</a>
             </div>
         </section>
 
